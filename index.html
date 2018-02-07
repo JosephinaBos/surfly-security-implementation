@@ -56,14 +56,17 @@
             sess = Surfly.currentSession;
           }
           sess.on('control', function(session, event) {
-            var element = document.getElementById("inputAddress");
+            var element1 = document.getElementById("inputAddress");
+            var element2 = document.getElementById("btn-submit");
             if (event.to==0) {
-              element.disabled = false;
-              element.style.display = "block";
+              element1.disabled = false;
+              element1.style.display = "block";
+              element2.disabled = false;
             }
             else {
-              element.disabled = true;
-              element.style.display = "none";
+              element1.disabled = true;
+              element1.style.display = "none";
+              element2.style.backgroundColor = "#f18787";
             }
           })
         }
