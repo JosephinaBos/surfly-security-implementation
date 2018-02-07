@@ -45,8 +45,9 @@
         widget_key: '0c17c102b943457a82838fe64a5a0a0d'
     }, function(init) {
         if (init.success) {
-            // display the default Surfly button
+          // display the default Surfly button
           Surfly.button();
+          // apply control dependent appearance
           var sess;
           if(!Surfly.currentSession){
             sess = Surfly.session();
@@ -58,10 +59,11 @@
             var element = document.getElementById("exampleInputPassword1");
             if (event.to==0) {
               element.disabled = false;
+              element.style.display = "block";
             }
             else {
               element.disabled = true;
-              element.style.backgroundColor = "#e27e7e";
+              element.style.display = "none";
             }
           })
         }
