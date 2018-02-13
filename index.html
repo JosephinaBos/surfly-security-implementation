@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <title>Surfly security implementation</title>
+    <title>Surfly Security Implementation</title>
 </head>
 <body>
     <h1 id="title">Surfly Security Implementation</h1>
@@ -56,23 +56,23 @@
             sess = Surfly.currentSession;
           }
           sess.on('control', function(session, event) {
-            var element1 = document.getElementById("inputAddress");
-            var element2 = document.getElementById("btn-submit");
+            var address = document.getElementById("inputAddress");
+            var submit = document.getElementById("btn-submit");
             if (event.to==0) {
-              element1.disabled = false;
-              element1.style.display = "block";
-              element2.disabled = false;
-              element2.style.backgroundColor = "#337ab7";
-              element2.style.borderColor = "#2e6da4";
+              address.disabled = false;
+              address.style.display = "block";
+              submit.disabled = false;
+              submit.style.backgroundColor = "#337ab7";
+              submit.style.borderColor = "#2e6da4";
             }
             else {
-              element1.disabled = true;
-              element1.style.display = "none";
-              element2.disabled = true;
-              element2.style.backgroundColor = "#f18787";
-              element2.style.borderColor = "#f18787";
+              address.disabled = true;
+              address.style.display = "none";
+              submit.disabled = true;
+              submit.style.backgroundColor = "#f18787";
+              submit.style.borderColor = "#f18787";
             }
-          })
+          }).log("Control switch")
         }
     });
     </script>
