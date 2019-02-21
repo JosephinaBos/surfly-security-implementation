@@ -12,7 +12,12 @@
 </head>
 <body>
     <h1 id="title">Surfly Security Implementation</h1>
-
+    <h2 id="instruction-title">Instructions</h2>
+    <p id="instructions">
+        1. Open the follower link in a different browser tab
+        2. Fill in the form fields. You can see that the password field is masked by default for the follower, but we've also applied <a href="https://docs.surfly.com/security-functionalities.html#header-field-masking">field masking</a> to the "Address" field with our surfly_private attribute.
+        3. Switch control by clicking the hand icon in the dock. You'll see that the address field disappeared completely on the follower's side and that the submit button got a different color and became unclickable for the follower. This was applied through <a href="https://docs.surfly.com/security-functionalities.html#header-control-dependent-appearance">control dependent appearance</a>.
+    </p>
     <form class="example-form">
       <div class="form-group">
         <label for="exampleInputEmail1">Email address</label>
@@ -42,7 +47,11 @@
 
 
     Surfly.init({
-        widget_key: '24f023888ca9419484b74f10eca984b2'
+        widget_key: '24f023888ca9419484b74f10eca984b2',
+        block_until_agent_joins: false,
+        hide_until_agent_joins: false,
+        splash: true,
+        newurl: false
     }, function(init) {
         if (init.success) {
           // display the default Surfly button

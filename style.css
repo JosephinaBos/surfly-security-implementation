@@ -1,7 +1,16 @@
 #title {
     text-align: center;
-    margin: 100px;
+    margin: 100px 100px 50px 100px;
+}
 
+#instruction-title {
+    text-align: center;
+    margin: 0px 100px 50px 100px;
+}
+
+#instructions {
+    text-align: center;
+    margin: 0px 100px 80px 100px;
 }
 
 .example-form {
